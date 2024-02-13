@@ -1,4 +1,4 @@
-package com.example.deliverytracker
+package com.example.deliverytracker.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
