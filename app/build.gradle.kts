@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -83,5 +85,17 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.8.2")
     implementation("androidx.fragment:fragment-ktx:1.6.2")
 
+    // When using a MDC theme
+    implementation("com.google.android.material:compose-theme-adapter:1.1.16")
+
+    // When using a AppCompat theme
+    implementation("com.google.accompanist:accompanist-appcompat-theme:0.28.0")
+
+    // Compose
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+
+    // Hilt
+    implementation ("com.google.dagger:hilt-android:2.49")
+    kapt ("com.google.dagger:hilt-android-compiler:2.48.1")
 
 }
