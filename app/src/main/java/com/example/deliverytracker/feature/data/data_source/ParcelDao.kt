@@ -18,7 +18,7 @@ interface ParcelDao {
     suspend fun getParcelById(id: Int): Parcel?
 
     @Insert(onConflict = OnConflictStrategy.REPLACE) // 데이터 추가
-    suspend fun insertParcel(parcel: Parcel)
+    suspend fun addParcel(parcel: Parcel)
 
     @Delete
     suspend fun deleteParcel(parcel: Parcel)
