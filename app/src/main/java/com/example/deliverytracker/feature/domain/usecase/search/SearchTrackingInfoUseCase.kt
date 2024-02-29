@@ -1,9 +1,9 @@
-package com.example.deliverytracker.feature.domain.usecase
+package com.example.deliverytracker.feature.domain.usecase.search
 
-import com.example.deliverytracker.feature.domain.repository.DeliveryRepository
+import com.example.deliverytracker.feature.domain.repository.SearchRepository
 
-class GetTrackingInfoUseCase(
-    private val repository: DeliveryRepository
+class SearchTrackingInfoUseCase(
+    private val repository: SearchRepository
 ) {
     suspend operator fun invoke(
         apiKey: String,

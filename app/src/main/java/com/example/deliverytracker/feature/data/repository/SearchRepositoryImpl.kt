@@ -1,17 +1,14 @@
 package com.example.deliverytracker.feature.data.repository
 
 import com.example.deliverytracker.feature.data.model.TrackingInfo
-import com.example.deliverytracker.feature.data.remote.DeliveryRemoteDataSource
-import com.example.deliverytracker.feature.domain.repository.DeliveryRepository
+import com.example.deliverytracker.feature.data.remote.SearchRemoteDataSource
+import com.example.deliverytracker.feature.domain.repository.SearchRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
-class DeliveryRepositoryImpl(
-    private val deliveryRemoteDataSource: DeliveryRemoteDataSource
-) : DeliveryRepository {
+class SearchRepositoryImpl(
+    private val deliveryRemoteDataSource: SearchRemoteDataSource
+) : SearchRepository {
 
     override fun getTrackingInfo(
         apiKey: String,

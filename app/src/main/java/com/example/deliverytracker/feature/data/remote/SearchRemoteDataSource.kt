@@ -5,7 +5,7 @@ import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface DeliveryRemoteDataSource {
+interface SearchRemoteDataSource {
     @GET("/api/v1/trackingInfo")
     fun getTrackingInfo(
         @Query("t_key") apiKey: String,
