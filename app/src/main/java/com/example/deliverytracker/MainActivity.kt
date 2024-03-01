@@ -12,15 +12,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             DeliveryTrackerTheme {
-                MainScreen()
             }
         }
     }
-}
-
-@Composable
-fun MainScreen() {
-    val scaffoldState = rememberScaffoldState() //최근의 상태를 저장
-    val scope = rememberCoroutineScope () // CoroutineScope 생성
-
 }
