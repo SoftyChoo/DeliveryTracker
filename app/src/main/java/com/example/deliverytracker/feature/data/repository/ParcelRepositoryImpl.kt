@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 class ParcelRepositoryImpl(
     private val dao: ParcelDao
 ) : ParcelRepository {
-    override fun getParcel(): Flow<List<Parcel>> = dao.getParcels()
+    override fun getParcels(): Flow<List<Parcel>> = dao.getParcels()
 
     override suspend fun getParcelById(id: Int): Parcel? = dao.getParcelById(id)
 
