@@ -4,7 +4,7 @@ import com.example.deliverytracker.feature.domain.model.Parcel
 import kotlinx.coroutines.flow.Flow
 
 interface ParcelRepository {
-    fun getParcel(): Flow<List<Parcel>>
+    fun getParcels(): Flow<List<Parcel>>
 
     suspend fun getParcelById(id: Int): Parcel?
 
