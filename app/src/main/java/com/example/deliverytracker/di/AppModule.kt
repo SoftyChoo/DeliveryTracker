@@ -30,4 +30,12 @@ object AppModule {
         ).build()
     }
 
+    @Provides
+    @Singleton
+    fun provideParcelRepository(db: ParcelDataBase): ParcelRepositoryImpl {
+        // ParcelDB 로부터 얻은 ParcelDao를 사용해 ParcelRepositoryImpl 인스턴스화
+        return ParcelRepositoryImpl(db.parcelDao)
+    }
+
+
 }
