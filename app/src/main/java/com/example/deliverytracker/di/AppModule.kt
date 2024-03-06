@@ -37,5 +37,13 @@ object AppModule {
         return ParcelRepositoryImpl(db.parcelDao)
     }
 
-
+    @Provides
+    @Singleton
+    fun provideParcelUseCases(repository: ParcelRepository) : ParcelUseCases{
+        return ParcelUseCases(
+            getParcelsUseCase = GetParcelsUseCase(repository),
+            deleteParcelUseCase = DeleteParcelUseCase(repository),
+            addParcelUseCase = AddParcelUseCase(repository)
+        )
+    }
 }
