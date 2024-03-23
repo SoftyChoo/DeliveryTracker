@@ -5,6 +5,7 @@ import androidx.navigation.NavController
 
 @Composable
 fun SearchScreen(
-    navController: NavController
+    navController: NavController,
+    viewModel: SearchViewModel
 ) {
 }
