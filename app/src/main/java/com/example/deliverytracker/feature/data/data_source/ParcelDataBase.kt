@@ -2,11 +2,11 @@ package com.example.deliverytracker.feature.data.data_source
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.example.deliverytracker.feature.domain.model.Parcel
+import com.example.deliverytracker.feature.domain.model.ParcelEntity
 
 
 @Database(
-    entities = [Parcel::class],
+    entities = [ParcelEntity::class],
     version = 1
 )
 abstract class ParcelDataBase : RoomDatabase(){

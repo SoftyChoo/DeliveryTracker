@@ -1,6 +1,6 @@
 package com.example.deliverytracker.feature.domain.repository
 
-import com.example.deliverytracker.feature.data.model.TrackingInfo
+import com.example.deliverytracker.feature.data.model.TrackingInfoResponse
 import kotlinx.coroutines.flow.Flow
 
 interface SearchRepository {
@@ -8,6 +8,6 @@ interface SearchRepository {
         apiKey: String,
         courierCode: String,
         invoiceNumber: String
-    ): Flow<TrackingInfo?>
+    ): Flow<TrackingInfoResponse?>
 }
 
