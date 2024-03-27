@@ -1,6 +1,6 @@
 package com.example.deliverytracker.feature.data.repository
 
-import com.example.deliverytracker.feature.data.model.TrackingInfo
+import com.example.deliverytracker.feature.data.model.TrackingInfoResponse
 import com.example.deliverytracker.feature.data.remote.SearchRemoteDataSource
 import com.example.deliverytracker.feature.domain.repository.SearchRepository
 import kotlinx.coroutines.flow.Flow
@@ -14,7 +14,7 @@ class SearchRepositoryImpl(
         apiKey: String,
         courierCode: String,
         invoiceNumber: String
-    ): Flow<TrackingInfo?> = flow {
+    ): Flow<TrackingInfoResponse?> = flow {
         emit(null) // 초기값
 
         val call = deliveryRemoteDataSource.getTrackingInfo(apiKey, courierCode, invoiceNumber)

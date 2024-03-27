@@ -2,11 +2,10 @@ package com.example.deliverytracker.feature.domain.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.deliverytracker.feature.data.model.TrackingDetail
-import com.example.deliverytracker.feature.data.model.TrackingInfo
+import com.example.deliverytracker.feature.data.model.TrackingDetailResponse
 
 @Entity
-data class Parcel(
+data class ParcelEntity(
 //    val trackingInfo: TrackingInfo,
     @PrimaryKey val id: Int? = null,
     val adUrl: String,
@@ -14,7 +13,7 @@ data class Parcel(
     val completeYN: String,
     val estimate: String,
     val level: Int,
-    val trackingDetails: List<TrackingDetail>,
+    val trackingDetails: List<TrackingDetailResponse>,
     val invoiceNo: String,
     val itemImage: String,
     val itemName: String,

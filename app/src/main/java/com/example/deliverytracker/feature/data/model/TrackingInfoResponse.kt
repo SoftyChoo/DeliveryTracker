@@ -2,13 +2,13 @@ package com.example.deliverytracker.feature.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class TrackingInfo(
+data class TrackingInfoResponse(
     @SerializedName("adUrl") val adUrl: String,
     @SerializedName("complete") val complete: Boolean,
     @SerializedName("completeYN") val completeYN: String,
     @SerializedName("estimate") val estimate: String,
     @SerializedName("level") val level: Int,
-    @SerializedName("trackingDetails") val trackingDetails: List<TrackingDetail>,
+    @SerializedName("trackingDetails") val trackingDetails: List<TrackingDetailResponse>,
     @SerializedName("invoiceNo") val invoiceNo: String,
     @SerializedName("itemImage") val itemImage: String,
     @SerializedName("itemName") val itemName: String,

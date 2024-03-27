@@ -1,14 +1,14 @@
 package com.example.deliverytracker.feature.domain.repository
 
-import com.example.deliverytracker.feature.domain.model.Parcel
+import com.example.deliverytracker.feature.domain.model.ParcelEntity
 import kotlinx.coroutines.flow.Flow
 
 interface ParcelRepository {
-    fun getParcels(): Flow<List<Parcel>>
+    fun getParcels(): Flow<List<ParcelEntity>>
 
-    suspend fun getParcelById(id: Int): Parcel?
+    suspend fun getParcelById(id: Int): ParcelEntity?
 
-    suspend fun addParcel(parcel: Parcel)
+    suspend fun addParcel(parcel: ParcelEntity)
 
-    suspend fun deleteParcel(parcel: Parcel)
+    suspend fun deleteParcel(parcel: ParcelEntity)
 }
