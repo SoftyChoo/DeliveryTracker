@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import com.example.deliverytracker.feature.data.model.TrackingDetailResponse
 
 @Entity
-data class ParcelEntity(
+data class Parcel(
 //    val trackingInfo: TrackingInfo,
     @PrimaryKey val id: Int? = null,
     val adUrl: String,
